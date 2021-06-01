@@ -23,14 +23,26 @@
       </button>
 
       <span>ANA LINK, LTD</span>
-
+      
+      <!-- Right side of top portion of navbar -->
       <span class="example-spacer"></span>
-      <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+      <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon" [mat-menu-trigger-for] ="menu1">
         <mat-icon>favorite</mat-icon>
+        <mat-menu #menu1 = "matMenu">
+          <button mat-menu-item>Quick Entry</button>
+          <button mat-menu-item>Customers</button>
+          <button mat-menu-item>Vendors</button>
+        </mat-menu>
       </button>
-      <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
+      
+      <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon"  [mat-menu-trigger-for]="menu2">
        <mat-icon>share</mat-icon>
-     </button>
+       <mat-menu #menu2 = "matMenu">
+        <button mat-menu-item>Settings</button>
+        <button mat-menu-item>Ask Experts</button>
+        <button mat-menu-item>Log Out</button>
+      </mat-menu>
+      </button>
 
     </mat-toolbar>
     <!-- Add Content Here -->
