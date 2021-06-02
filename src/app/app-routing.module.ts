@@ -15,7 +15,8 @@ const routes: Routes = [
   {path: 'drag-drop', component:DragDropComponent},
   {path: 'mat-tree', component: MatTreeComponent},
   {path: 'navi', component: NaviComponent},
-  {path: 'import-table', component: ImportTableComponent}
+  {path: 'import-table', component: ImportTableComponent},
+  { path: 'customers', loadChildren: () => import('./customers/customers.module').then(m => m.CustomersModule) }
 
 ];
 
